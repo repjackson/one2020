@@ -23,18 +23,9 @@ template(name='user_edit_layout')
                             a.ui.large.basic.icon.circular.button(href="/user/#{current_user.username}/edit/info" class="{{isActiveRoute 'user_edit_info'}}" title='info') 
                                 i.info.large.icon 
                                 // |info
-                            a.ui.large.basic.icon.circular.button(href="/user/#{current_user.username}/edit/food" class="{{isActiveRoute 'user_edit_food'}}") 
-                                i.food.large.icon 
-                                // |food
-                            a.ui.large.basic.icon.circular.button(href="/user/#{current_user.username}/edit/delivery" class="{{isActiveRoute 'user_edit_delivery'}}") 
-                                i.truck.large.icon 
-                                // |delivery
                             a.ui.large.basic.icon.circular.button(href="/user/#{current_user.username}/edit/alerts" class="{{isActiveRoute 'user_edit_alerts'}}") 
                                 i.bell.large.icon 
                                 // |alerts
-                            a.ui.large.basic.icon.circular.button(href="/user/#{current_user.username}/edit/style" class="{{isActiveRoute 'user_edit_style'}}") 
-                                i.paint.brush.large.icon 
-                                // |style
                             a.ui.large.basic.icon.circular.button(href="/user/#{current_user.username}/edit/genekeys" class="{{isActiveRoute 'user_edit_genekeys'}}") 
                                 i.dna.large.icon 
                                 // |genekeys
@@ -47,9 +38,6 @@ template(name='user_edit_layout')
                             a.ui.large.basic.icon.circular.button(href="/user/#{current_user.username}/edit/membership" class="{{isActiveRoute 'user_edit_membership'}}" title='membership') 
                                 i.shield.large.icon
                                 // | membership
-                            a.ui.large.basic.icon.circular.button(href="/user/#{current_user.username}/edit/tribes" class="{{isActiveRoute 'user_edit_tribes'}}") 
-                                i.fire.large.icon 
-                                // |tribes
                         .twelve.wide.column
                             +yield
 

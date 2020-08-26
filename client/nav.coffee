@@ -2,8 +2,6 @@ Template.nav.onCreated ->
     @autorun => Meteor.subscribe 'me'
     @autorun => Meteor.subscribe 'all_users'
     @autorun => Meteor.subscribe 'my_unread_messages'
-    @autorun => Meteor.subscribe 'model_docs', 'tribe'
-    @autorun => Meteor.subscribe 'model_docs', 'feature'
 
 Template.nav.onRendered ->
     Meteor.setTimeout ->
@@ -93,14 +91,6 @@ Template.nav.events
         Session.set 'loading', true
         Meteor.call 'set_facets', 'model', ->
             Session.set 'loading', false
-    'click .set_rental': ->
-        Session.set 'loading', true
-        Meteor.call 'set_facets', 'rental', ->
-            Session.set 'loading', false
-    'click .set_product': ->
-        Session.set 'loading', true
-        Meteor.call 'set_facets', 'product', ->
-            Session.set 'loading', false
     'click .set_event': ->
         Session.set 'loading', true
         Meteor.call 'set_facets', 'event', ->
@@ -108,10 +98,6 @@ Template.nav.events
     'click .set_location': ->
         Session.set 'loading', true
         Meteor.call 'set_facets', 'location', ->
-            Session.set 'loading', false
-    'click .set_meal': ->
-        Session.set 'loading', true
-        Meteor.call 'set_facets', 'meal', ->
             Session.set 'loading', false
     'click .set_photo': ->
         Session.set 'loading', true
@@ -228,14 +214,6 @@ Template.left_sidebar.events
         Session.set 'loading', true
         Meteor.call 'set_facets', 'model', ->
             Session.set 'loading', false
-    'click .set_rental': ->
-        Session.set 'loading', true
-        Meteor.call 'set_facets', 'rental', ->
-            Session.set 'loading', false
-    'click .set_product': ->
-        Session.set 'loading', true
-        Meteor.call 'set_facets', 'product', ->
-            Session.set 'loading', false
     'click .set_event': ->
         Session.set 'loading', true
         Meteor.call 'set_facets', 'event', ->
@@ -244,17 +222,9 @@ Template.left_sidebar.events
         Session.set 'loading', true
         Meteor.call 'set_facets', 'expense', ->
             Session.set 'loading', false
-    'click .set_badge': ->
-        Session.set 'loading', true
-        Meteor.call 'set_facets', 'badge', ->
-            Session.set 'loading', false
     'click .set_location': ->
         Session.set 'loading', true
         Meteor.call 'set_facets', 'location', ->
-            Session.set 'loading', false
-    'click .set_meal': ->
-        Session.set 'loading', true
-        Meteor.call 'set_facets', 'meal', ->
             Session.set 'loading', false
     'click .set_project': ->
         Session.set 'loading', true
